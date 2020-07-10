@@ -13,3 +13,7 @@ if(AVISYNTH_FOUND)
 else()
     include_directories(include/avisynth)
 endif()
+
+include(GNUInstallDirs)
+INSTALL(TARGETS negate
+        DESTINATION "${CMAKE_INSTALL_LIBDIR}/avisynth")
